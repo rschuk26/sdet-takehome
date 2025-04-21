@@ -1,0 +1,61 @@
+name: CI Pipeline
+
+on:
+  workflow_dispatch:
+    # Optional inputs can be defined here
+    inputs:
+      debug:
+        description: 'Enable debug logging'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the repository code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Set up Docker Buildx for building Docker images
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # Cache Docker layers to speed up builds
+      - name: Cache Docker layers
+        uses: actions/cache@v4
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+
+      # Start the application stack using docker-compose
+      - name: Start application stack
+        run: |
+          docker compose up -d --build
+        env:
+          # Ensure Docker Compose uses the same environment as defined in docker-compose.yml
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+
+      # Wait for services to be healthy
+      - name: Wait for services to be ready
+        run: |
+          until docker compose ps | grep -q "healthy"; do
+            echo "Waiting for services to be healthy..."
+            sleep 5
+          done
+          echo "All services are healthy!"
+          
+      - name: Print hello message
+        run: echo "Hello GitHub Actions"
+
+      # Stop and clean up Docker containers
+      - name: Stop Docker containers
+        if: always()
+        run: |
+          docker compose down

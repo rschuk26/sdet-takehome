@@ -1,0 +1,24 @@
+
+.interaction-list-item {
+  /* display: flex;
+  align-items: center; */
+  padding: 15px;
+  border: 2px solid #828282;
+  cursor: pointer;
+  position: relative;
+  background-color: #ffffff;
+  min-height: 90px;
+  min-width: 350px;
+  flex: 1;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.interaction-list-item:hover {
+  background-color: #f0f2f5;
+}
+
+.interaction-list-item.selected {
+  background-color: #F3FDFE;
+  border: 2px solid #00709D;
+}

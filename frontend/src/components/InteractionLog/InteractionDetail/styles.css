@@ -1,0 +1,62 @@
+/* Detail Section */
+.interaction-detail {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.detail-row {
+  margin-bottom: 10px;
+  padding-bottom: 2px;
+}
+
+.detail-label {
+  font-size: 14px;
+  font-weight: 900;
+  margin-right: 20px;
+  color: #666;
+  min-width: 100px;
+  display: inline-block;
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+.detail-description {
+  margin-top: 20px;
+}
+
+.detail-description .detail-label {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.description-value {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.delete-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.delete-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff;
+}

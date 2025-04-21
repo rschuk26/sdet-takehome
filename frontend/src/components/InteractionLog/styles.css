@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  .app {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+  
+  /* Main container */
+  .interaction-log-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  @media (min-width: 768px) {
+    .interaction-log-container {
+      flex-direction: row;
+      min-height: 500px;
+      height: 575px;
+    }
+  }
+  
+  /* Header */
+  .interaction-log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    background-color: #fff;
+    margin-left: 40px;
+  }
+  
+  .interaction-log-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  .interaction-log-add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .interaction-log-add-button:hover {
+    color: #333;
+  }
+
+  .interaction-detail-panel {
+    padding: 10px 10px;
+    border: 2px solid #828282;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 34px;
+    height: 475px;
+  }
+  
+  @media (min-width: 768px) {
+    .interaction-log-panel {
+      width: 45%;
+    }
+    
+    .interaction-detail-panel {
+      width: 55%;
+    }
+  }
+  
+  /* Interaction List */
+  .interaction-list-wrapper {
+    display: flex;
+  }
+  
+  /* Radio button */
+  .interaction-selector {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    min-width: 20px;
+  }
+  
+  .interaction-selector input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #d0d0d0;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+  }
+  
+  .interaction-selector input[type="radio"]:checked {
+    border: 2px solid #5856d6;
+    background-color: #5856d6;
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Content */
+  .interaction-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Person Avatars */
+  .interaction-person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+  }
+  
+  .avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .avatar.purple {
+    background-color: #9c27b0;
+  }
+  
+  .avatar.yellow {
+    background-color: #e6a21e;
+  }
+  
+  .interaction-person .name {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #333;
+  }
+  
+  .interaction-person .company {
+    font-size: 10px;
+    color: #767676;
+    margin-top: 1px;
+  }
+  
+  /* Connector */
+  .interaction-connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+  }
+  
+  .connector-line {
+    color: #464646;
+    font-size: 30px;
+    margin: 6px 0;
+    line-height: 1;
+    letter-spacing: 0;
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  /* Icons */
+  .interaction-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: #666;
+    flex: 1;
+  }
+  
+  /* Pagination */
+  .interaction-log-pagination {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    background-color: #fff;
+  }
+  
+  .pagination-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin: 0 4px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .pagination-dot.active {
+    background-color: #5856d6;
+  }
