@@ -4,8 +4,7 @@
 
 This assessment allows you to demonstrate your ability to plan and execute testing of a basic full stack component. You'll be working with a React/TypeScript frontend and a Node/Express/Postgres backend that records interactions between people.
 
-<img width="1074" alt="Screenshot 2025-04-21 at 3 19 37 PM" src="https://github.com/user-attachments/assets/272675da-942a-47c2-ac9c-2c156fc06fac" />
-
+![Screenshot 2025-04-22 at 9 34 00 AM](https://github.com/user-attachments/assets/7bdeb2ba-9050-4583-a44a-f5763511297c)
 
 The component allows users to:
 - View a list of interactions between people
