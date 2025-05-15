@@ -72,4 +72,4 @@ You may note bugs or edge cases during this process. Note them in a document cal
 - Ability to identify bugs and weak points
 
 ## Next Steps
-Our team will evaluate your assessment. If the evalutation criteria are met, you'll be invited to attend a panel interview to discuss your assessment.
+Our team will evaluate your assessment. If the evaluation criteria are met, you'll be invited to attend a panel interview to discuss your assessment.
