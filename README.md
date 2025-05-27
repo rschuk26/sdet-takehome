@@ -29,9 +29,9 @@ Save this document to the repository.
 
 
 ### Part 2: Test Code
-In this section, choose one the following two options:
+For this section, choose only one the following two options:
 
-#### Part 2a: API and Frontend Testing
+#### API and Frontend Testing (Option 1)
 Set up an API testing framework of your choice (Jest, Mocha/Chai, Supertest, etc.) These tests should focus on direct endpoint calls.
    - Write basic tests for each of the API endpoints
    - Choose one endpoint to test in more depth, covering several edge cases
@@ -39,7 +39,7 @@ Set up an API testing framework of your choice (Jest, Mocha/Chai, Supertest, etc
 Set up a UI testing framework of your choice (React Testing Library, Cypress, Playwright, etc.) These tests should focus on UI components in isolation.
    - Write at least two tests for the frontend component or one of its sub-components.
 
-#### Part 2b: Integration Testing
+#### Integration Testing (Option 2)
  These tests should simulate real user interactions through the UI, hitting the actual backend. Create at least one end-to-end test that:
    - Loads the application
    - Creates a new interaction
