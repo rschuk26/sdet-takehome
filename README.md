@@ -35,6 +35,7 @@ In this section, choose one the following two options:
 Set up an API testing framework of your choice (Jest, Mocha/Chai, Supertest, etc.) These tests should focus on direct endpoint calls.
    - Write basic tests for each of the API endpoints
    - Choose one endpoint to test in more depth, covering several edge cases
+     
 Set up a UI testing framework of your choice (React Testing Library, Cypress, Playwright, etc.) These tests should focus on UI components in isolation.
    - Write at least two tests for the frontend component or one of its sub-components.
 
