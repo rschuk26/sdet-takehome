@@ -20,7 +20,7 @@ In the root directory, there is a `docker-compose.yml`. You can build the entire
 Hot reloading is enabled by default, so any changes you make should happen on the fly.
 
 ### 3. Using a test database
-If you would like to set up a separate postgres instance for your tests, the client code in `backend/src/db/postgresClient.ts` allows for this. Below is an example of how you might configure this in Supertest.
+If you would like to use a separate postgres database for your tests, the client code in `backend/src/db/postgresClient.ts` allows for this. Below is an example of how you might configure this in Supertest.
 
     beforeAll(async () => {
       // Create test database client
