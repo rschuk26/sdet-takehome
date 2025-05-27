@@ -29,7 +29,7 @@ Save this document to the repository.
 
 
 ### Part 2: Test Code
-For this section, choose only one the following two options:
+For this section, choose and deliver one the following two options:
 
 #### [Option 1] API and Frontend Testing
 Set up an API testing framework of your choice (Jest, Mocha/Chai, Supertest, etc.) These tests should focus on direct endpoint calls.
