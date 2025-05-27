@@ -50,4 +50,4 @@ View the [README](README.md) to see the expected deliverables.
 
 ### 5. Commit your code to a personal repository
 
-Commit the codebase along with your tests together to a new repository owned by you. When you are finished, please submit this link back to your Talent Acquisition contact at Sayari.
+Commit the codebase along with your tests together to a new repository owned by you. When you are finished, please submit that link to your Talent Acquisition contact at Sayari, who will share it with the rest of the team.
