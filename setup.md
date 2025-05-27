@@ -19,20 +19,34 @@ In the root directory, there is a `docker-compose.yml`. You can build the entire
 
 Hot reloading is enabled by default, so any changes you make should happen on the fly.
 
-### 3. Work on the deliverables
+### 3. Using a test database
+If you would like to set up a separate postgres instance for your tests, the client code in backend/src/db/postgresClient.ts allows for this. Below is an example of how you might configure this in Supertest.
+
+    beforeAll(async () => {
+      // Create test database client
+      testDb = new DatabaseClient({
+        database: 'test_db'
+      });
+
+      // Set up clean test schema
+      await testDb.initializeDb(false); // No seed data
+    });
+
+    beforeEach(async () => {
+      // Clean slate for each test
+      await testDb.clearDb();
+
+      // Add minimal test entities
+      await testDb.query(`INSERT INTO entities (...) VALUES (...)`);
+    });
+
+    afterAll(async () => {
+      await testDb.close();
+    });
+
+### 4. Work on the deliverables
 
 View the [README](README.md) to see the expected deliverables.
-
-### 4. Test the Github Workflow (optional)
-
-If you chose to update the `.github/workflows/main.yml` file to run your tests:
-
-- Create repository secrets for the database credentials and connection (for example `POSTGRES_USER` etc)
-- Go to the Actions tab
-- Find `CI Pipeline` in the Workflows list
-- Click on the `Run workflow` button
-
-Note that this method of delivery is optional, and more information can be found in the readme.
 
 ### 5. Commit your code to a personal repository
 
