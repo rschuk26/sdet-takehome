@@ -52,7 +52,7 @@ You may note bugs or edge cases during this process. Note them in a document cal
    
 ## Deliverables
 1. Test strategy document committed to the repo
-2. WWorking test code for your chosen option (2a or 2b) committed to the repo
+2. Working test code for your chosen option from Part 2, committed to the repo
 3. A README with instructions on how to run your work
 4. Bug document committed to the repo
 
