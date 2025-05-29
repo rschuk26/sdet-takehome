@@ -7,7 +7,7 @@ import {InteractionsApiHelper} from "../common/api/InteractionsApiHelper";
 let apiContext: APIRequestContext;
 let interactionsApiHelper: InteractionsApiHelper;
 
-test.describe('API test suite for /interactions', () => {
+test.describe('API test suite for interactions', () => {
     test.beforeAll(async () => {
         apiContext = await request.newContext({
             ignoreHTTPSErrors: true
