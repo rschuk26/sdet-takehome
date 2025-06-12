@@ -1,9 +1,14 @@
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
+    testDir: './tests',
+    reporter: [
+        ['list'],
+        ['html', { open: 'always', outputFolder: 'playwright-report' }]
+    ],
+    outputDir: 'test-results/',
     use: {
         baseURL: 'http://localhost:3000',
-        // Add timeout
         actionTimeout: 10000,
     },
     // Add global timeout
