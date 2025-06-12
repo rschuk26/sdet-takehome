@@ -4,7 +4,7 @@ export default defineConfig({
     testDir: './',
     reporter: [
         ['list'],
-        ['html', { open: 'always', outputFolder: 'playwright-report' }]
+        ['html', { open: 'never', outputFolder: 'playwright-report' }]
     ],
     outputDir: 'test-results/',
     use: {

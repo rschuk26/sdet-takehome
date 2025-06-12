@@ -53,7 +53,8 @@ export class InteractionsPage {
         await this.page.waitForSelector('.popup-overlay', { state: 'visible' });
         await this.page.getByLabel('Source Contact').selectOption(`${sourceContact}`);
         await this.page.getByLabel('Target Contact').selectOption(`${targetContact}`);
-        await this.page.getByText(`${type}`).nth(0).click();
+        await this.page.waitForTimeout(1000);
+        await this.page.locator('label').filter({ hasText: `${type}` }).click();
         await this.descriptionInputField.fill(description);
         await this.addInteractionButton.click();
         await this.page.waitForSelector('.popup-overlay', { state: 'hidden' });
